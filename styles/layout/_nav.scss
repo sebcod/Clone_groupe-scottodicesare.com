@@ -1,0 +1,21 @@
+nav {
+    width: 100%;
+
+    border: 1px solid $color2;
+    background-color: $color1;
+
+
+    ul {
+        display: flex;
+        gap: 63px;
+
+        li {
+            &::after {
+                //content: "\f140";
+                //content: "\25B8";
+                content: "\f140";
+
+            }
+        }
+    }
+}

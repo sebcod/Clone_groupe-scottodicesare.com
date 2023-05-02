@@ -1,0 +1,46 @@
+header {
+    color: $color3;
+    width: 100vw;
+    //height: 105px;
+    background-color: $color1;
+    display: grid;
+    grid-template-columns: 22.5% 1fr;
+    grid-template-rows: repeat(2, 50px);
+    grid-template-areas: "logo contact" "logo menu";
+
+    @media screen and (max-whidth: 800px) {
+        display: flex;
+    }
+
+
+    .contact {
+        grid-area: contact;
+        // height: 50px;
+        // width: 50%;
+        border: 1px solid blue;
+    }
+
+    .logo {
+        grid-area: logo;
+        // width: 30%;
+        border: 1px solid red;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .menu {
+        grid-area: menu;
+        // width: 70%;
+        border: 1px solid red;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+
+        @import "./nav";
+    }
+}

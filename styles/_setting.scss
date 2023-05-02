@@ -1,0 +1,54 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mixins */
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centerColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*  color  */
+$color1: rgb(14, 14, 14);
+$color2: rgb(129, 138, 145);
+$color3: rgb(255, 255, 255);
+$color4: rgb(187, 187, 187);
+$color5: rgb(64, 84, 178);
+$color6: rgb(131, 60, 163);
+$color7: rgb(125, 157, 133);
+$color7: rgb(227, 225, 232);
+$color7: rgb(97, 162, 41);
+
+@font-face {
+    font-family: "font1";
+    src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+$font1: "font1", sans-serif;

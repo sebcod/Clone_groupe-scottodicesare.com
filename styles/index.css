@@ -1,0 +1,108 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mixins */
+/*  color  */
+@font-face {
+  font-family: "font1";
+  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+}
+header {
+  color: rgb(255, 255, 255);
+  width: 100vw;
+  background-color: rgb(14, 14, 14);
+  display: grid;
+  grid-template-columns: 22.5% 1fr;
+  grid-template-rows: repeat(2, 50px);
+  grid-template-areas: "logo contact" "logo menu";
+}
+@media screen and (max-whidth: 800px) {
+  header {
+    display: flex;
+  }
+}
+header .contact {
+  grid-area: contact;
+  border: 1px solid blue;
+}
+header .logo {
+  grid-area: logo;
+  border: 1px solid red;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+}
+header .menu {
+  grid-area: menu;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+header .menu nav {
+  width: 100%;
+  border: 1px solid rgb(129, 138, 145);
+  background-color: rgb(14, 14, 14);
+}
+header .menu nav ul {
+  display: flex;
+  gap: 63px;
+}
+header .menu nav ul li::after {
+  content: "\f140";
+}
+
+main {
+  border: solid;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 65px;
+}
+main .banner {
+  width: 100vw;
+  height: 515px;
+  border: solid;
+}
+main section {
+  min-width: 1140px;
+  height: 533px;
+  border: solid;
+}
+main .partenaires {
+  width: 100vw;
+  height: 515px;
+  border: solid;
+}
+
+footer {
+  color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 365px;
+  background-color: rgb(14, 14, 14);
+}/*# sourceMappingURL=index.css.map */

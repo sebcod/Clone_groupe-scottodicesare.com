@@ -1,0 +1,27 @@
+main {
+    border: solid;
+    background-color: $color3;
+    width: 100vw;
+
+
+    @include centerColumn;
+    gap: 65px;
+
+    .banner {
+        width: 100vw;
+        height: 515px;
+        border: solid;
+    }
+
+    section {
+        min-width: 1140px;
+        height: 533px;
+        border: solid;
+    }
+
+    .partenaires {
+        width: 100vw;
+        height: 515px;
+        border: solid;
+    }
+}
