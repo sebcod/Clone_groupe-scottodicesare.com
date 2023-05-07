@@ -26,13 +26,18 @@ a,
   font-family: "fontRaleway";
   src: url(../font/raleway/Raleway-VariableFont_wght.ttf);
 }
+body {
+  font-family: Helvetica, sans-serif;
+}
+
 header {
+  position: relative;
   color: rgb(255, 255, 255);
   width: 100%;
   background-color: rgb(14, 14, 14);
   display: grid;
   grid-template-columns: 22.5% 1fr;
-  grid-template-rows: repeat(2, 50px);
+  grid-template-rows: repeat(2, auto);
   grid-template-areas: "logo contact" "logo menu";
 }
 @media screen and (max-width: 1024px) {
@@ -42,6 +47,11 @@ header {
     grid-template-areas: "contact contact" "logo menu";
   }
 }
+@media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 50% 50%;
+  }
+}
 header .contact {
   grid-area: contact;
   padding: 5px 50px;
@@ -49,46 +59,260 @@ header .contact {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  border: 1px solid blue;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: end;
-  gap: 50px;
+  gap: 100px;
 }
 header .contact ul {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+}
+header .contact ul i {
+  font-size: 2em;
+}
+@media screen and (max-width: 768px) {
+  header .contact {
+    justify-content: space-between;
+    gap: 0;
+    padding: 5px 20px;
+  }
 }
 header .logo {
   grid-area: logo;
-  border: 1px solid red;
+  padding: 10px;
 }
 header .logo img {
-  width: 100%;
-  height: 100%;
+  width: 70%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 header .menu {
   grid-area: menu;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: end;
 }
 header .menu nav {
   width: 100%;
-  border: 1px solid rgb(129, 138, 145);
+  padding: 0px 50px;
   background-color: rgb(14, 14, 14);
-}
-header .menu nav ul {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
   display: flex;
-  gap: 63px;
+  justify-content: center;
+  align-items: center;
+  justify-content: end;
 }
-header .menu nav ul li::after {
-  content: "\f140";
+header .menu nav .menuRowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+}
+header .menu nav .menuRowContainer .menuRow::after {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  height: 0;
+  width: 0;
+  border-top: 8px solid rgb(255, 255, 255);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+header .menu nav .menuRowContainer .menuRow:nth-child(6)::after {
+  display: none;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(14, 14, 14);
+  width: 100vw;
+  padding: 30px;
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
+    flex-direction: column;
+    left: -10px;
+    position: inherit;
+    padding: 0;
+  }
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
+  width: 25%;
+  padding: 40px;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn {
+  flex-direction: column;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li {
+  width: 100%;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
+    width: 100%;
+    padding: 20px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenuVide {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer {
+    position: absolute;
+    background-color: rgb(14, 14, 14);
+    width: 100vw;
+    left: 0px;
+    top: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+  header .menu nav .menuRowContainer li {
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  header .menu nav .menuRowContainer li::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    margin-left: 30px;
+    height: 0;
+    width: 0;
+    border-top: 8px solid rgb(255, 255, 255);
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .menu nav {
+    justify-content: end;
+    padding-right: 20px;
+  }
+}
+header .menu nav .menuBurger {
+  position: relative;
+  width: 25px;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+header .menu nav .menuBurger .bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+}
+header .menu nav .menuBurger .bar::after, header .menu nav .menuBurger .bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+}
+header .menu nav .menuBurger .bar::before {
+  transform: translateY(-7px);
+}
+header .menu nav .menuBurger .bar::after {
+  transform: translateY(7px);
+}
+@media screen and (min-width: 768px) {
+  header .menu nav .menuBurger {
+    display: none;
+  }
+}
+header .menu nav .aciveMenuBurger .bar {
+  background-color: transparent;
+  transition: background-color 0.5s ease-in;
+}
+@keyframes activeBefore {
+  0% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes activeAfter {
+  0% {
+    transform: translateY(7px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+header .menu nav .aciveMenuBurger .bar::after {
+  border: none;
+  animation-name: activeAfter;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+header .menu nav .aciveMenuBurger .bar::before {
+  border: none;
+  animation-name: activeBefore;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+header .menu nav .disableMenuBurger .bar {
+  background-color: #F9BFC4;
+  transition: background-color 0.5s ease-in;
+}
+@keyframes disableBefore {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-7px);
+  }
+}
+@keyframes disableAfter {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(7px);
+  }
+}
+header .menu nav .disableMenuBurger .bar::after {
+  animation-name: disableAfter;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+header .menu nav .disableMenuBurger .bar::before {
+  animation-name: disableBefore;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 main {
