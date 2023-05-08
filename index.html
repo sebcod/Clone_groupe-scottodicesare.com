@@ -37,10 +37,13 @@
       </div>
       <div class="menu">
         <nav>
-          <ul class="menuRowContainer">
+          <ul class="menuContainer menuContainerMobileHidden">
             <li class="menuRow arrow">
-              <span class="menuRowSpan">cfa</span>
-              <ul class="sousMenuContainer sousMenuContainerVisibility">
+              <span id="cfa" class="menuRowSpan">cfa</span>
+              <ul
+                id="sousMenuCFA"
+                class="sousMenuContainer sousMenuContainerVisibility"
+              >
                 <li class="sousMenu">
                   <ul class="sousMenuColumn">
                     <li>cfa</li>
@@ -53,7 +56,7 @@
               </ul>
             </li>
             <li class="menuRow arrow">
-              <span class="menuRowSpan">école</span>
+              <span id="ecole" class="menuRowSpan">école</span>
               <ul class="sousMenuContainer sousMenuContainerVisibility">
                 <li class="sousMenu">
                   <ul class="sousMenuColumn">
@@ -72,7 +75,7 @@
               </ul>
             </li>
             <li class="menuRow arrow">
-              <span class="menuRowSpan">esthétique</span>
+              <span id="esthetique" class="menuRowSpan">esthétique</span>
               <ul class="sousMenuContainer sousMenuContainerVisibility">
                 <li class="sousMenu">
                   <ul class="sousMenuColumn">
@@ -105,7 +108,7 @@
               </ul>
             </li>
             <li class="menuRow arrow">
-              <span class="menuRowSpan">coiffure</span>
+              <span id="coiffure" class="menuRowSpan">coiffure</span>
               <ul class="sousMenuContainer sousMenuContainerVisibility">
                 <li class="sousMenu">
                   <ul class="sousMenuColumn">
@@ -128,7 +131,9 @@
               </ul>
             </li>
             <li class="menuRow arrow">
-              <span class="menuRowSpan">formations pros</span>
+              <span id="formationsPro" class="menuRowSpan"
+                >formations pros</span
+              >
               <ul class="sousMenuContainer sousMenuContainerVisibility">
                 <li class="sousMenu">
                   <ul class="sousMenuColumn">
@@ -154,9 +159,11 @@
                 </li>
               </ul>
             </li>
-            <li class="menuRow"><span class="menuRowSpan">actualités</span></li>
+            <li class="menuRow">
+              <span id="actualites" class="menuRowSpan">actualités</span>
+            </li>
             <li class="menuRow arrow">
-              <span class="menuRowSpan">médias</span>
+              <span id="medias" class="menuRowSpan">médias</span>
               <ul class="sousMenuContainer sousMenuContainerVisibility">
                 <li class="sousMenu">
                   <ul class="sousMenuColumn">
@@ -169,7 +176,7 @@
               </ul>
             </li>
           </ul>
-          <button class="menuBurger">
+          <button class="menuBurger disableMenuBurger">
             <span class="bar"></span>
           </button>
         </nav>

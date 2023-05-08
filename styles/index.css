@@ -110,7 +110,7 @@ header .menu nav {
   align-items: center;
   justify-content: end;
 }
-header .menu nav .menuRowContainer {
+header .menu nav .menuContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +118,7 @@ header .menu nav .menuRowContainer {
   -moz-column-gap: 35px;
        column-gap: 35px;
 }
-header .menu nav .menuRowContainer .arrow::after {
+header .menu nav .menuContainer .arrow::after {
   content: "";
   display: inline-block;
   margin-left: 10px;
@@ -129,7 +129,7 @@ header .menu nav .menuRowContainer .arrow::after {
   border-left: 4px solid transparent;
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .arrow::after {
+  header .menu nav .menuContainer .arrow::after {
     margin-right: 20px;
     content: "";
     position: absolute;
@@ -143,25 +143,32 @@ header .menu nav .menuRowContainer .arrow::after {
     border-left: 4px solid transparent;
   }
 }
-header .menu nav .menuRowContainer .menuRow .menuRowSpan {
+header .menu nav .menuContainer .menuRow .menuRowSpan {
   position: relative;
 }
-header .menu nav .menuRowContainer .menuRow .menuRowSpan:hover::before {
+header .menu nav .menuContainer .menuRow .menuRowSpan:hover::before {
   content: "";
   position: absolute;
   z-index: 100;
   width: 100%;
   height: 200px;
+  border: 1px solid red;
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow .menuRowSpan {
-    margin-left: 20px;
+  header .menu nav .menuContainer .menuRow .menuRowSpan:hover::before {
+    display: none;
   }
 }
-header .menu nav .menuRowContainer .menuRow:hover {
+@media screen and (max-width: 768px) {
+  header .menu nav .menuContainer .menuRow .menuRowSpan {
+    display: block;
+    padding-left: 20px;
+  }
+}
+header .menu nav .menuContainer .menuRow:hover {
   cursor: pointer;
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
+header .menu nav .menuContainer .menuRow .sousMenuContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,77 +185,83 @@ header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
   padding: 50px;
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
+  header .menu nav .menuContainer .menuRow .sousMenuContainer {
     flex-direction: column;
     padding: 20px;
     position: inherit;
     width: 100%;
   }
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenuVisible {
+  display: block;
+}
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu {
   width: 25%;
   align-self: start;
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
+  header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu {
     width: 100%;
     padding: 0;
     margin: 0;
   }
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn {
   flex-direction: column;
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li {
   transition: 0.5s ease;
   padding: 0 30px;
   width: 100%;
   font-weight: 700;
   line-height: 50px;
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li:hover {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li:hover {
   cursor: pointer;
   color: rgb(129, 138, 145);
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li.btn {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li.btn {
   border: 1px solid rgb(14, 14, 14);
   font-size: 16px;
   font-weight: 400;
   text-align: center;
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li.btn:hover {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li.btn:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(14, 14, 14);
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li h1 {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li h1 {
   font-weight: 900;
   font-size: 18px;
   border-bottom: 2px solid #E8348C;
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li h1:hover {
+header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li h1:hover {
   cursor: default;
   color: rgb(14, 14, 14);
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenuVide {
+  header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenuVide {
     display: none;
   }
 }
-header .menu nav .menuRowContainer .menuRow .sousMenuContainerVisibility {
+header .menu nav .menuContainer .menuRow .sousMenuContainerVisibility {
   display: none;
 }
-header .menu nav .menuRowContainer .menuRow:hover .sousMenuContainerVisibility {
+header .menu nav .menuContainer .menuRow:hover .sousMenuContainerVisibility {
   display: flex;
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow {
+  header .menu nav .menuContainer .menuRow {
     width: 100%;
     justify-content: space-evenly;
     position: relative;
   }
+  header .menu nav .menuContainer .menuRow:hover .sousMenuContainerVisibility {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer {
+  header .menu nav .menuContainer {
     position: absolute;
     background-color: rgb(14, 14, 14);
     width: 100%;
@@ -261,6 +274,11 @@ header .menu nav .menuRowContainer .menuRow:hover .sousMenuContainerVisibility {
   header .menu nav {
     justify-content: end;
     padding-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuContainerMobileHidden {
+    display: none;
   }
 }
 header .menu nav .menuBurger {
@@ -337,7 +355,7 @@ header .menu nav .aciveMenuBurger .bar::before {
   animation-fill-mode: forwards;
 }
 header .menu nav .disableMenuBurger .bar {
-  background-color: #F9BFC4;
+  background-color: rgb(255, 255, 255);
   transition: background-color 0.5s ease-in;
 }
 @keyframes disableBefore {
