@@ -69,8 +69,14 @@ header .contact ul {
   display: flex;
   gap: 20px;
 }
-header .contact ul i {
+header .contact ul li:hover {
+  cursor: pointer;
+}
+header .contact ul li i {
   font-size: 2em;
+}
+header .contact ul li i:hover {
+  color: rgb(129, 138, 145);
 }
 @media screen and (max-width: 768px) {
   header .contact {
@@ -112,7 +118,7 @@ header .menu nav .menuRowContainer {
   -moz-column-gap: 35px;
        column-gap: 35px;
 }
-header .menu nav .menuRowContainer .menuRow::after {
+header .menu nav .menuRowContainer .arrow::after {
   content: "";
   display: inline-block;
   margin-left: 10px;
@@ -122,69 +128,9 @@ header .menu nav .menuRowContainer .menuRow::after {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
-header .menu nav .menuRowContainer .menuRow:nth-child(6)::after {
-  display: none;
-}
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 100;
-  top: 100%;
-  left: 0px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(14, 14, 14);
-  width: 100vw;
-  padding: 30px;
-}
 @media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
-    flex-direction: column;
-    left: -10px;
-    position: inherit;
-    padding: 0;
-  }
-}
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
-  width: 25%;
-  padding: 40px;
-}
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn {
-  flex-direction: column;
-}
-header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li {
-  width: 100%;
-  font-weight: 700;
-}
-@media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
-    width: 100%;
-    padding: 20px 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenuVide {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .menu nav .menuRowContainer {
-    position: absolute;
-    background-color: rgb(14, 14, 14);
-    width: 100vw;
-    left: 0px;
-    top: 100%;
-    padding: 10px;
-    flex-direction: column;
-  }
-  header .menu nav .menuRowContainer li {
-    width: 100%;
-    justify-content: space-evenly;
-    position: relative;
-  }
-  header .menu nav .menuRowContainer li::after {
+  header .menu nav .menuRowContainer .arrow::after {
+    margin-right: 20px;
     content: "";
     position: absolute;
     top: 15px;
@@ -195,6 +141,120 @@ header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMe
     border-top: 8px solid rgb(255, 255, 255);
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
+  }
+}
+header .menu nav .menuRowContainer .menuRow .menuRowSpan {
+  position: relative;
+}
+header .menu nav .menuRowContainer .menuRow .menuRowSpan:hover::before {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 200px;
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow .menuRowSpan {
+    margin-left: 20px;
+  }
+}
+header .menu nav .menuRowContainer .menuRow:hover {
+  cursor: pointer;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 8%;
+       column-gap: 8%;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(14, 14, 14);
+  width: 100vw;
+  padding: 50px;
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow .sousMenuContainer {
+    flex-direction: column;
+    padding: 20px;
+    position: inherit;
+    width: 100%;
+  }
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
+  width: 25%;
+  align-self: start;
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn {
+  flex-direction: column;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li {
+  transition: 0.5s ease;
+  padding: 0 30px;
+  width: 100%;
+  font-weight: 700;
+  line-height: 50px;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li:hover {
+  cursor: pointer;
+  color: rgb(129, 138, 145);
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li.btn {
+  border: 1px solid rgb(14, 14, 14);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li.btn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(14, 14, 14);
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li h1 {
+  font-weight: 900;
+  font-size: 18px;
+  border-bottom: 2px solid #E8348C;
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li h1:hover {
+  cursor: default;
+  color: rgb(14, 14, 14);
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow .sousMenuContainer .sousMenuVide {
+    display: none;
+  }
+}
+header .menu nav .menuRowContainer .menuRow .sousMenuContainerVisibility {
+  display: none;
+}
+header .menu nav .menuRowContainer .menuRow:hover .sousMenuContainerVisibility {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer .menuRow {
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuRowContainer {
+    position: absolute;
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    left: 0px;
+    top: 100%;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 768px) {

@@ -42,9 +42,21 @@ header {
             display: flex;
             gap: 20px;
 
-            i {
-                font-size: 2em;
+            li {
+                &:hover {
+                    cursor: pointer;
+                }
+
+                i {
+                    font-size: 2em;
+
+                    &:hover {
+                        color: $color2;
+                    }
+                }
             }
+
+
         }
 
         @media screen and (max-width: 768px) {
@@ -57,7 +69,6 @@ header {
 
     .logo {
         grid-area: logo;
-        //border: 1px solid red;
         padding: 10px;
 
         img {

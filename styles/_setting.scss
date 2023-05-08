@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+// * {
+//     box-shadow: 0 0 0 3px red inset;
+// }
+
 *,
 ::after,
 ::before {
@@ -43,8 +47,11 @@ $color4: rgb(187, 187, 187);
 $color5: rgb(64, 84, 178);
 $color6: rgb(131, 60, 163);
 $color7: rgb(125, 157, 133);
-$color7: rgb(227, 225, 232);
-$color7: rgb(97, 162, 41);
+$color8: rgb(227, 225, 232);
+$color9: rgb(97, 162, 41);
+$color10: #E8348C;
+
+
 
 @font-face {
     font-family: "fontRaleway";
