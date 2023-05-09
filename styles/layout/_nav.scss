@@ -27,6 +27,7 @@ nav {
                 border-top: 8px solid $color3;
                 border-right: 4px solid transparent;
                 border-left: 4px solid transparent;
+                border: 1px solid $color2;
 
                 @media screen and (max-width: 768px) {
                     margin-right: 20px;
@@ -47,7 +48,6 @@ nav {
         }
 
         .menuRow {
-
 
             .menuRowSpan {
                 position: relative;
@@ -94,10 +94,7 @@ nav {
                     padding: 20px;
                     position: inherit;
                     width: 100%;
-                }
-
-                .sousMenuVisible {
-                    display: block;
+                    //display: none;
                 }
 
                 .sousMenu {
@@ -111,6 +108,7 @@ nav {
                             width: 100%;
                             padding: 0;
                             margin: 0;
+
                         }
                     }
 
@@ -163,7 +161,7 @@ nav {
                 }
             }
 
-            .sousMenuContainerVisibility {
+            .sousMenuHidden {
                 display: none;
             }
 

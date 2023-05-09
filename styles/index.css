@@ -127,6 +127,7 @@ header .menu nav .menuContainer .arrow::after {
   border-top: 8px solid rgb(255, 255, 255);
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
+  border: 1px solid rgb(129, 138, 145);
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .arrow::after {
@@ -192,9 +193,6 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
     width: 100%;
   }
 }
-header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenuVisible {
-  display: block;
-}
 header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu {
   width: 25%;
   align-self: start;
@@ -244,7 +242,7 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuC
     display: none;
   }
 }
-header .menu nav .menuContainer .menuRow .sousMenuContainerVisibility {
+header .menu nav .menuContainer .menuRow .sousMenuHidden {
   display: none;
 }
 header .menu nav .menuContainer .menuRow:hover .sousMenuContainerVisibility {
