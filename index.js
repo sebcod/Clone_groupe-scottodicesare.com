@@ -8,6 +8,10 @@ const sousMenuCoiffure = document.getElementById("sousMenuCoiffure");
 const sousMenuFormationsPro = document.getElementById("sousMenuFormationsPro");
 const sousMenuMedias = document.getElementById("sousMenuMedias");
 const sousMenuContainer = document.querySelectorAll(".sousMenuContainer");
+const cfa = document.getElementById("CFA");
+console.log(cfa);
+
+//cfa.classList.add("arrowDown");
 
 /* Menu Buger */
 menuBurger.addEventListener("click", () => {
@@ -31,6 +35,9 @@ menuRowSpan.forEach((rowSpan) => {
           console.log("la cfa");
 
           sousMenuCFA.classList.toggle("sousMenuHidden");
+          cfa.parentElement.classList.toggle("arrowDown");
+          cfa.parentElement.classList.toggle("arrowUp");
+
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
           sousMenuCoiffure.classList.add("sousMenuHidden");

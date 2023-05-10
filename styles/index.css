@@ -118,28 +118,44 @@ header .menu nav .menuContainer {
   -moz-column-gap: 35px;
        column-gap: 35px;
 }
-header .menu nav .menuContainer .arrow::after {
+header .menu nav .menuContainer .arrowDown::after {
   content: "";
   display: inline-block;
   margin-left: 10px;
   height: 0;
   width: 0;
-  border-top: 8px solid rgb(255, 255, 255);
+  border-top: 8px solid #3344df;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
-  border: 1px solid rgb(129, 138, 145);
 }
 @media screen and (max-width: 768px) {
-  header .menu nav .menuContainer .arrow::after {
+  header .menu nav .menuContainer .arrowDown::after {
     margin-right: 20px;
     content: "";
     position: absolute;
+    z-index: 0;
+    top: 15px;
+    right: 0;
+    margin-left: 10px;
+    height: 0;
+    width: 0;
+    border-top: 8px solid #6d3592;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .menu nav .menuContainer .arrowUp::after {
+    margin-right: 20px;
+    content: "";
+    position: absolute;
+    z-index: 0;
     top: 15px;
     right: 0;
     margin-left: 30px;
     height: 0;
     width: 0;
-    border-top: 8px solid rgb(255, 255, 255);
+    border-bottom: 8px solid #2fdb20;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
   }
