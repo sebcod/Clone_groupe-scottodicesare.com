@@ -52,18 +52,18 @@ nav {
             .menuRowSpan {
                 position: relative;
 
-                &:hover::before {
-                    content: "";
-                    position: absolute;
-                    z-index: 100;
-                    width: 100%;
-                    height: 200px;
-                    border: 1px solid red;
+                // &:hover::before {
+                //     content: "";
+                //     position: absolute;
+                //     z-index: 100;
+                //     width: 100%;
+                //     height: 200px;
+                //     border: 1px solid red;
 
-                    @media screen and (max-width: 768px) {
-                        display: none;
-                    }
-                }
+                //     @media screen and (max-width: 768px) {
+                //         display: none;
+                //     }
+                // }
 
                 @media screen and (max-width: 768px) {
                     display: block;
@@ -165,22 +165,22 @@ nav {
                 display: none;
             }
 
-            &:hover {
-                .sousMenuContainerVisibility {
-                    display: flex;
-                }
-            }
+            // &:hover {
+            //     .sousMenuContainerVisibility {
+            //         display: flex;
+            //     }
+            // }
 
             @media screen and (max-width: 768px) {
                 width: 100%;
                 justify-content: space-evenly;
                 position: relative;
 
-                &:hover {
-                    .sousMenuContainerVisibility {
-                        display: none;
-                    }
-                }
+                // &:hover {
+                //     .sousMenuContainerVisibility {
+                //         display: none;
+                //     }
+                // }
 
             }
         }

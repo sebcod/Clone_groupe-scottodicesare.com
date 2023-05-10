@@ -21,167 +21,155 @@ menuBurger.addEventListener("click", () => {
   }
 });
 
-function menuResponsive() {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    console.log("max-width: 768px");
-    /* sous menu mobile hidden*/
-    menuRowSpan.forEach((rowSpan) => {
-      rowSpan.addEventListener("click", (e) => {
-        switch (e.target.id) {
-          case "CFA":
-            console.log("la cfa");
+/* sous menu mobile hidden*/
+menuRowSpan.forEach((rowSpan) => {
+  rowSpan.addEventListener("click", (e) => {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      console.log("max-width: 768px");
+      switch (e.target.id) {
+        case "CFA":
+          console.log("la cfa");
 
-            sousMenuCFA.classList.toggle("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
+          sousMenuCFA.classList.toggle("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
 
-            break;
-          case "ecole":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.toggle("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
-            break;
-          case "esthetique":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.toggle("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
+          break;
+        case "ecole":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.toggle("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
+          break;
+        case "esthetique":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.toggle("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
 
-            break;
-          case "coiffure":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.toggle("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
+          break;
+        case "coiffure":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.toggle("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
 
-            break;
-          case "formationsPro":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.toggle("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
+          break;
+        case "formationsPro":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.toggle("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
 
-            break;
-          case "medias":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.toggle("sousMenuHidden");
+          break;
+        case "medias":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.toggle("sousMenuHidden");
 
-            break;
-          default:
-        }
-      });
-    });
-  }
-
-  if (!window.matchMedia("(max-width: 768px)").matches) {
-    console.log("min-width: 768px");
-
-    // window.addEventListener("mouseover", (e) => {
-    //   sousMenuCFA.classList.add("sousMenuHidden");
-    //   sousMenuEcole.classList.add("sousMenuHidden");
-    //   sousMenuEsthetique.classList.add("sousMenuHidden");
-    //   sousMenuCoiffure.classList.add("sousMenuHidden");
-    //   sousMenuFormationsPro.classList.add("sousMenuHidden");
-    //   sousMenuMedias.classList.add("sousMenuHidden");
-    // });
-
-    /* sous menu mobile hidden*/
-    menuRowSpan.forEach((rowSpan) => {
-      rowSpan.addEventListener("mouseover", (e) => {
-        switch (e.target.id) {
-          case "CFA":
-            sousMenuCFA.classList.remove("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
-
-            break;
-          case "ecole":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.remove("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
-            break;
-          case "esthetique":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.remove("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
-
-            break;
-          case "coiffure":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.remove("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
-
-            break;
-          case "formationsPro":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.remove("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
-
-            break;
-          case "medias":
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.remove("sousMenuHidden");
-
-            break;
-          default:
-            sousMenuCFA.classList.add("sousMenuHidden");
-            sousMenuEcole.classList.add("sousMenuHidden");
-            sousMenuEsthetique.classList.add("sousMenuHidden");
-            sousMenuCoiffure.classList.add("sousMenuHidden");
-            sousMenuFormationsPro.classList.add("sousMenuHidden");
-            sousMenuMedias.classList.add("sousMenuHidden");
-        }
-      });
-    });
-  }
-}
-
-menuResponsive();
-
-window.onchange(() => {
-  console.log("load");
-  menuResponsive();
+          break;
+        default:
+      }
+    }
+  });
 });
-// window.addEventListener("resize", () => {
-//   console.log("resize");
+
+/* sous menu mobile hidden*/
+menuRowSpan.forEach((rowSpan) => {
+  rowSpan.addEventListener("mouseover", (e) => {
+    if (!window.matchMedia("(max-width: 768px)").matches) {
+      console.log("min-width: 768px");
+      switch (e.target.id) {
+        case "CFA":
+          sousMenuCFA.classList.remove("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
+
+          break;
+        case "ecole":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.remove("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
+          break;
+        case "esthetique":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.remove("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
+
+          break;
+        case "coiffure":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.remove("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
+
+          break;
+        case "formationsPro":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.remove("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
+
+          break;
+        case "medias":
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.remove("sousMenuHidden");
+
+          break;
+        default:
+          sousMenuCFA.classList.add("sousMenuHidden");
+          sousMenuEcole.classList.add("sousMenuHidden");
+          sousMenuEsthetique.classList.add("sousMenuHidden");
+          sousMenuCoiffure.classList.add("sousMenuHidden");
+          sousMenuFormationsPro.classList.add("sousMenuHidden");
+          sousMenuMedias.classList.add("sousMenuHidden");
+      }
+    }
+  });
+});
+
+// menuResponsive();
+
+// window.onchange(() => {
+//   console.log("load");
 //   menuResponsive();
 // });
-window.addEventListener("maximize", () => {
-  console.log("maximise");
-  menuResponsive();
-});
+// // window.addEventListener("resize", () => {
+// //   console.log("resize");
+// //   menuResponsive();
+// // });
+// window.addEventListener("maximize", () => {
+//   console.log("maximise");
+//   menuResponsive();
+// });
