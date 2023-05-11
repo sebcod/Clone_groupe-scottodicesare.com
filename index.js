@@ -1,6 +1,8 @@
 const menuBurger = document.querySelector(".menuBurger");
 const menuContainer = document.querySelector(".menuContainer");
-const menuRowSpan = document.querySelectorAll(".menuRowSpan");
+//const menuRowSpan = document.querySelectorAll(".menuRowSpan");
+const menuRow = document.querySelectorAll(".menuRow");
+
 const sousMenuCFA = document.getElementById("sousMenuCFA");
 const sousMenuEcole = document.getElementById("sousMenuEcole");
 const sousMenuEsthetique = document.getElementById("sousMenuEsthetique");
@@ -26,17 +28,15 @@ menuBurger.addEventListener("click", () => {
 });
 
 /* sous menu mobile hidden*/
-menuRowSpan.forEach((rowSpan) => {
-  rowSpan.addEventListener("click", (e) => {
+menuRow.forEach((row) => {
+  row.addEventListener("click", (e) => {
     if (window.matchMedia("(max-width: 768px)").matches) {
       console.log("max-width: 768px");
       switch (e.target.id) {
         case "CFA":
-          console.log("la cfa");
-
           sousMenuCFA.classList.toggle("sousMenuHidden");
-          cfa.parentElement.classList.toggle("arrowDown");
-          cfa.parentElement.classList.toggle("arrowUp");
+          cfa.classList.toggle("arrowDown");
+          cfa.classList.toggle("arrowUp");
 
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
@@ -96,8 +96,8 @@ menuRowSpan.forEach((rowSpan) => {
 });
 
 /* sous menu mobile hidden*/
-menuRowSpan.forEach((rowSpan) => {
-  rowSpan.addEventListener("mouseover", (e) => {
+menuRow.forEach((row) => {
+  row.addEventListener("mouseover", (e) => {
     if (!window.matchMedia("(max-width: 768px)").matches) {
       console.log("min-width: 768px");
       switch (e.target.id) {

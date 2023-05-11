@@ -74,20 +74,25 @@ nav {
 
         .menuRow {
 
-            .menuRowSpan {
-                position: relative;
+            border: 1px solid rgb(238, 255, 0);
+            //position: relative;
 
-                @media screen and (max-width: 768px) {
-                    display: block;
-                    padding-left: 20px;
-                }
-            }
+            // .menuRowSpan {
+            //     position: relative;
+
+            //     @media screen and (max-width: 768px) {
+            //         display: block;
+            //         padding-left: 20px;
+            //     }
+            // }
 
             &:hover {
                 cursor: pointer;
             }
 
             .sousMenuContainer {
+                border: 1px solid rgb(255, 0, 13);
+
                 @include center;
                 justify-content: center;
                 column-gap: 8%;
@@ -97,7 +102,6 @@ nav {
                 left: 0px;
                 background-color: $color3;
                 color: $color1;
-                //border: 1px solid red;
                 width: 100vw;
                 padding: 50px;
 
@@ -105,7 +109,9 @@ nav {
                     flex-direction: column;
                     padding: 20px;
                     position: inherit;
-                    width: 100%;
+                    width: 100vw;
+
+                    transform: translateX(-20px);
                     //display: none;
                 }
 
@@ -177,8 +183,9 @@ nav {
 
             @media screen and (max-width: 768px) {
                 width: 100%;
-                justify-content: space-evenly;
-                position: relative;
+                //justify-content: space-evenly;
+                //position: relative;
+                padding-left: 20px;
             }
 
 

@@ -160,19 +160,14 @@ header .menu nav .menuContainer .arrowDown::after {
     border-left: 4px solid transparent;
   }
 }
-header .menu nav .menuContainer .menuRow .menuRowSpan {
-  position: relative;
-}
-@media screen and (max-width: 768px) {
-  header .menu nav .menuContainer .menuRow .menuRowSpan {
-    display: block;
-    padding-left: 20px;
-  }
+header .menu nav .menuContainer .menuRow {
+  border: 1px solid rgb(238, 255, 0);
 }
 header .menu nav .menuContainer .menuRow:hover {
   cursor: pointer;
 }
 header .menu nav .menuContainer .menuRow .sousMenuContainer {
+  border: 1px solid rgb(255, 0, 13);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +188,8 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
     flex-direction: column;
     padding: 20px;
     position: inherit;
-    width: 100%;
+    width: 100vw;
+    transform: translateX(-20px);
   }
 }
 header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu {
@@ -251,8 +247,7 @@ header .menu nav .menuContainer .menuRow .sousMenuHidden {
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow {
     width: 100%;
-    justify-content: space-evenly;
-    position: relative;
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 768px) {
