@@ -11,9 +11,11 @@ const sousMenuFormationsPro = document.getElementById("sousMenuFormationsPro");
 const sousMenuMedias = document.getElementById("sousMenuMedias");
 const sousMenuContainer = document.querySelectorAll(".sousMenuContainer");
 const cfa = document.getElementById("CFA");
-console.log(cfa);
-
-//cfa.classList.add("arrowDown");
+const ecole = document.getElementById("ecole");
+const esthetique = document.getElementById("esthetique");
+const coiffure = document.getElementById("coiffure");
+const formationsPro = document.getElementById("formationsPro");
+const medias = document.getElementById("medias");
 
 /* Menu Buger */
 menuBurger.addEventListener("click", () => {
@@ -35,14 +37,13 @@ menuRow.forEach((row) => {
       switch (e.target.id) {
         case "CFA":
           sousMenuCFA.classList.toggle("sousMenuHidden");
-          cfa.classList.toggle("arrowDown");
-          cfa.classList.toggle("arrowUp");
-
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
           sousMenuCoiffure.classList.add("sousMenuHidden");
           sousMenuFormationsPro.classList.add("sousMenuHidden");
           sousMenuMedias.classList.add("sousMenuHidden");
+          cfa.classList.toggle("arrowDown");
+          cfa.classList.toggle("arrowUp");
 
           break;
         case "ecole":
@@ -52,6 +53,8 @@ menuRow.forEach((row) => {
           sousMenuCoiffure.classList.add("sousMenuHidden");
           sousMenuFormationsPro.classList.add("sousMenuHidden");
           sousMenuMedias.classList.add("sousMenuHidden");
+          ecole.classList.toggle("arrowDown");
+          ecole.classList.toggle("arrowUp");
           break;
         case "esthetique":
           sousMenuCFA.classList.add("sousMenuHidden");
@@ -60,6 +63,8 @@ menuRow.forEach((row) => {
           sousMenuCoiffure.classList.add("sousMenuHidden");
           sousMenuFormationsPro.classList.add("sousMenuHidden");
           sousMenuMedias.classList.add("sousMenuHidden");
+          esthetique.classList.toggle("arrowDown");
+          esthetique.classList.toggle("arrowUp");
 
           break;
         case "coiffure":
@@ -69,6 +74,8 @@ menuRow.forEach((row) => {
           sousMenuCoiffure.classList.toggle("sousMenuHidden");
           sousMenuFormationsPro.classList.add("sousMenuHidden");
           sousMenuMedias.classList.add("sousMenuHidden");
+          coiffure.classList.toggle("arrowDown");
+          coiffure.classList.toggle("arrowUp");
 
           break;
         case "formationsPro":
@@ -78,6 +85,8 @@ menuRow.forEach((row) => {
           sousMenuCoiffure.classList.add("sousMenuHidden");
           sousMenuFormationsPro.classList.toggle("sousMenuHidden");
           sousMenuMedias.classList.add("sousMenuHidden");
+          formationsPro.classList.toggle("arrowDown");
+          formationsPro.classList.toggle("arrowUp");
 
           break;
         case "medias":
@@ -87,6 +96,8 @@ menuRow.forEach((row) => {
           sousMenuCoiffure.classList.add("sousMenuHidden");
           sousMenuFormationsPro.classList.add("sousMenuHidden");
           sousMenuMedias.classList.toggle("sousMenuHidden");
+          medias.classList.toggle("arrowDown");
+          medias.classList.toggle("arrowUp");
 
           break;
         default:
