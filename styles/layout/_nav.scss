@@ -12,12 +12,8 @@ nav {
 
     .menuContainer {
         @include center;
-        //height: 100%;
         flex-wrap: wrap;
         column-gap: 35px;
-        //border: 1px solid rgb(238, 255, 0);
-
-
 
         .arrowDown {
             &::after {
@@ -69,27 +65,12 @@ nav {
         }
 
         .menuRow {
-            //height: 100%;
-            border: 1px solid rgb(238, 255, 0);
-            //position: relative;
-
-            // .menuRowSpan {
-            //     position: relative;
-
-            //     @media screen and (max-width: 768px) {
-            //         display: block;
-            //         padding-left: 20px;
-            //     }
-            // }
-
-
 
             &:hover {
                 cursor: pointer;
             }
 
             .sousMenuContainer {
-                //border: 1px solid rgb(255, 0, 13);
                 @include center;
                 justify-content: center;
                 column-gap: 8%;
@@ -109,7 +90,6 @@ nav {
                     width: 100vw;
 
                     transform: translateX(-20px);
-                    //display: none;
                 }
 
                 .sousMenu {
@@ -180,7 +160,6 @@ nav {
 
             @media screen and (max-width: 768px) {
                 width: 100%;
-                //justify-content: space-evenly;
                 position: relative;
                 padding-left: 20px;
             }

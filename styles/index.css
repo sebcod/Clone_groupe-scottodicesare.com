@@ -34,6 +34,7 @@ header {
   position: relative;
   color: rgb(255, 255, 255);
   width: 100%;
+  border-bottom: 2px solid rgb(187, 187, 187);
   background-color: rgb(14, 14, 14);
   display: grid;
   grid-template-columns: 22.5% 1fr;
@@ -59,7 +60,6 @@ header .contact {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  border: 1px solid blue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,9 +162,6 @@ header .menu nav .menuContainer .arrowDown::after {
     border-left: 4px solid transparent;
   }
 }
-header .menu nav .menuContainer .menuRow {
-  border: 1px solid rgb(238, 255, 0);
-}
 header .menu nav .menuContainer .menuRow:hover {
   cursor: pointer;
 }
@@ -183,6 +180,7 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
   color: rgb(14, 14, 14);
   width: 100vw;
   padding: 50px;
+  transition-property: transfrom;
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow .sousMenuContainer {

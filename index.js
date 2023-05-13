@@ -1,8 +1,6 @@
 const menuBurger = document.querySelector(".menuBurger");
 const menuContainer = document.querySelector(".menuContainer");
-//const menuRowSpan = document.querySelectorAll(".menuRowSpan");
 const menuRow = document.querySelectorAll(".menuRow");
-
 const sousMenuCFA = document.getElementById("sousMenuCFA");
 const sousMenuEcole = document.getElementById("sousMenuEcole");
 const sousMenuEsthetique = document.getElementById("sousMenuEsthetique");
@@ -16,6 +14,9 @@ const esthetique = document.getElementById("esthetique");
 const coiffure = document.getElementById("coiffure");
 const formationsPro = document.getElementById("formationsPro");
 const medias = document.getElementById("medias");
+const main = document.querySelector("main");
+const logo = document.querySelector(".logo");
+const contact = document.querySelector(".contact");
 
 /* Menu Buger */
 menuBurger.addEventListener("click", () => {
@@ -98,7 +99,6 @@ menuRow.forEach((row) => {
           sousMenuMedias.classList.toggle("sousMenuHidden");
           medias.classList.toggle("arrowDown");
           medias.classList.toggle("arrowUp");
-
           break;
         default:
       }
@@ -106,13 +106,14 @@ menuRow.forEach((row) => {
   });
 });
 
-/* sous menu mobile hidden*/
 menuRow.forEach((row) => {
   row.addEventListener("mouseover", (e) => {
     if (!window.matchMedia("(max-width: 768px)").matches) {
       console.log("min-width: 768px");
+
       switch (e.target.id) {
         case "CFA":
+          console.log("cfa");
           sousMenuCFA.classList.remove("sousMenuHidden");
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
@@ -122,6 +123,7 @@ menuRow.forEach((row) => {
 
           break;
         case "ecole":
+          console.log("ecole");
           sousMenuCFA.classList.add("sousMenuHidden");
           sousMenuEcole.classList.remove("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
@@ -130,6 +132,7 @@ menuRow.forEach((row) => {
           sousMenuMedias.classList.add("sousMenuHidden");
           break;
         case "esthetique":
+          console.log("esthetique");
           sousMenuCFA.classList.add("sousMenuHidden");
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.remove("sousMenuHidden");
@@ -139,6 +142,7 @@ menuRow.forEach((row) => {
 
           break;
         case "coiffure":
+          console.log("coiffure");
           sousMenuCFA.classList.add("sousMenuHidden");
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
@@ -148,6 +152,7 @@ menuRow.forEach((row) => {
 
           break;
         case "formationsPro":
+          console.log("formationPro");
           sousMenuCFA.classList.add("sousMenuHidden");
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
@@ -157,6 +162,7 @@ menuRow.forEach((row) => {
 
           break;
         case "medias":
+          console.log("medias");
           sousMenuCFA.classList.add("sousMenuHidden");
           sousMenuEcole.classList.add("sousMenuHidden");
           sousMenuEsthetique.classList.add("sousMenuHidden");
@@ -166,28 +172,40 @@ menuRow.forEach((row) => {
 
           break;
         default:
-          sousMenuCFA.classList.add("sousMenuHidden");
-          sousMenuEcole.classList.add("sousMenuHidden");
-          sousMenuEsthetique.classList.add("sousMenuHidden");
-          sousMenuCoiffure.classList.add("sousMenuHidden");
-          sousMenuFormationsPro.classList.add("sousMenuHidden");
-          sousMenuMedias.classList.add("sousMenuHidden");
       }
     }
   });
 });
 
-// menuResponsive();
+main.addEventListener("mouseover", (e) => {
+  if (!window.matchMedia("(max-width: 768px)").matches) {
+    sousMenuCFA.classList.add("sousMenuHidden");
+    sousMenuEcole.classList.add("sousMenuHidden");
+    sousMenuEsthetique.classList.add("sousMenuHidden");
+    sousMenuCoiffure.classList.add("sousMenuHidden");
+    sousMenuFormationsPro.classList.add("sousMenuHidden");
+    sousMenuMedias.classList.add("sousMenuHidden");
+  }
+});
 
-// window.onchange(() => {
-//   console.log("load");
-//   menuResponsive();
-// });
-// // window.addEventListener("resize", () => {
-// //   console.log("resize");
-// //   menuResponsive();
-// // });
-// window.addEventListener("maximize", () => {
-//   console.log("maximise");
-//   menuResponsive();
-// });
+logo.addEventListener("mouseover", (e) => {
+  if (!window.matchMedia("(max-width: 768px)").matches) {
+    sousMenuCFA.classList.add("sousMenuHidden");
+    sousMenuEcole.classList.add("sousMenuHidden");
+    sousMenuEsthetique.classList.add("sousMenuHidden");
+    sousMenuCoiffure.classList.add("sousMenuHidden");
+    sousMenuFormationsPro.classList.add("sousMenuHidden");
+    sousMenuMedias.classList.add("sousMenuHidden");
+  }
+});
+
+contact.addEventListener("mouseover", (e) => {
+  if (!window.matchMedia("(max-width: 768px)").matches) {
+    sousMenuCFA.classList.add("sousMenuHidden");
+    sousMenuEcole.classList.add("sousMenuHidden");
+    sousMenuEsthetique.classList.add("sousMenuHidden");
+    sousMenuCoiffure.classList.add("sousMenuHidden");
+    sousMenuFormationsPro.classList.add("sousMenuHidden");
+    sousMenuMedias.classList.add("sousMenuHidden");
+  }
+});

@@ -1,9 +1,8 @@
 header {
-    // border: 1px solid blue;
     position: relative;
     color: $color3;
     width: 100%;
-    //height: 105px;
+    border-bottom: 2px solid $color4;
     background-color: $color1;
     display: grid;
     grid-template-columns: 22.5% 1fr;
@@ -32,7 +31,6 @@ header {
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
-        border: 1px solid blue;
 
         @include center;
         justify-content: end;
@@ -72,20 +70,15 @@ header {
 
         grid-area: logo;
         padding: 10px;
-        //border: 1px solid blue;
 
         img {
             width: 70%;
-            //height: 100%;
             object-fit: contain;
         }
     }
 
     .menu {
         grid-area: menu;
-
-        //border: 1px solid red;
-        //@include center;
         @import "./nav";
 
     }
