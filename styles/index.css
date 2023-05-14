@@ -29,6 +29,9 @@ a,
 body {
   font-family: Helvetica, sans-serif;
 }
+body main {
+  background-color: rgba(180, 17, 17, 0.4431372549);
+}
 
 header {
   position: relative;
@@ -174,13 +177,12 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
        column-gap: 8%;
   position: absolute;
   z-index: 0;
-  top: 90%;
+  top: 100%;
   left: 0px;
   background-color: rgb(255, 255, 255);
   color: rgb(14, 14, 14);
   width: 100vw;
   padding: 50px;
-  transition-property: transfrom;
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow .sousMenuContainer {
@@ -242,6 +244,9 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuC
 }
 header .menu nav .menuContainer .menuRow .sousMenuHidden {
   display: none;
+}
+header .menu nav .menuContainer .menuRow .animMenuContainer {
+  transform: 80%;
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow {

@@ -76,12 +76,19 @@ nav {
                 column-gap: 8%;
                 position: absolute;
                 z-index: 0;
-                top: 90%;
+                top: 100%;
                 left: 0px;
                 background-color: $color3;
                 color: $color1;
                 width: 100vw;
                 padding: 50px;
+                // transition-property: transform;
+                // transition-duration: 1s;
+
+
+                // &:hover {
+                //     transform: top 80%;
+                // }
 
                 @media screen and (max-width: 768px) {
                     flex-direction: column;
@@ -156,6 +163,10 @@ nav {
 
             .sousMenuHidden {
                 display: none;
+            }
+
+            .animMenuContainer {
+                transform: 80%;
             }
 
             @media screen and (max-width: 768px) {
