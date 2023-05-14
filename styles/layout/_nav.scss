@@ -68,6 +68,12 @@ nav {
 
             &:hover {
                 cursor: pointer;
+
+                .sousMenuContainer {
+                    transform: translateY(0);
+                    visibility: visible;
+                    opacity: 0.98;
+                }
             }
 
             .sousMenuContainer {
@@ -75,20 +81,16 @@ nav {
                 justify-content: center;
                 column-gap: 8%;
                 position: absolute;
-                z-index: 0;
-                top: 100%;
+                //z-index: 0;
                 left: 0px;
                 background-color: $color3;
                 color: $color1;
                 width: 100vw;
                 padding: 50px;
-                // transition-property: transform;
-                // transition-duration: 1s;
-
-
-                // &:hover {
-                //     transform: top 80%;
-                // }
+                transform: translateY(10px);
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.2s ease-in;
 
                 @media screen and (max-width: 768px) {
                     flex-direction: column;
@@ -165,16 +167,11 @@ nav {
                 display: none;
             }
 
-            .animMenuContainer {
-                transform: 80%;
-            }
-
             @media screen and (max-width: 768px) {
                 width: 100%;
                 position: relative;
                 padding-left: 20px;
             }
-
 
         }
 
@@ -196,6 +193,7 @@ nav {
     .menuContainerMobileHidden {
         @media screen and (max-width: 768px) {
             display: none;
+
         }
     }
 

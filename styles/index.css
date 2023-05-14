@@ -168,6 +168,11 @@ header .menu nav .menuContainer .arrowDown::after {
 header .menu nav .menuContainer .menuRow:hover {
   cursor: pointer;
 }
+header .menu nav .menuContainer .menuRow:hover .sousMenuContainer {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 0.98;
+}
 header .menu nav .menuContainer .menuRow .sousMenuContainer {
   display: flex;
   justify-content: center;
@@ -176,13 +181,15 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
   -moz-column-gap: 8%;
        column-gap: 8%;
   position: absolute;
-  z-index: 0;
-  top: 100%;
   left: 0px;
   background-color: rgb(255, 255, 255);
   color: rgb(14, 14, 14);
   width: 100vw;
   padding: 50px;
+  transform: translateY(10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in;
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow .sousMenuContainer {
@@ -244,9 +251,6 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuC
 }
 header .menu nav .menuContainer .menuRow .sousMenuHidden {
   display: none;
-}
-header .menu nav .menuContainer .menuRow .animMenuContainer {
-  transform: 80%;
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow {
