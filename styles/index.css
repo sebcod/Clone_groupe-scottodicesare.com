@@ -168,10 +168,12 @@ header .menu nav .menuContainer .arrowDown::after {
 header .menu nav .menuContainer .menuRow:hover {
   cursor: pointer;
 }
-header .menu nav .menuContainer .menuRow:hover .sousMenuContainer {
-  transform: translateY(0);
-  visibility: visible;
-  opacity: 0.98;
+@media screen and (min-width: 768px) {
+  header .menu nav .menuContainer .menuRow:hover .sousMenuContainer {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 0.98;
+  }
 }
 header .menu nav .menuContainer .menuRow .sousMenuContainer {
   display: flex;
@@ -193,11 +195,13 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow .sousMenuContainer {
+    visibility: visible;
+    opacity: 1;
     flex-direction: column;
-    padding: 20px;
     position: inherit;
     width: 100vw;
     transform: translateX(-20px);
+    display: none;
   }
 }
 header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu {
@@ -249,8 +253,8 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuC
     display: none;
   }
 }
-header .menu nav .menuContainer .menuRow .sousMenuHidden {
-  display: none;
+header .menu nav .menuContainer .menuRow .activeSousMenuMobile {
+  display: flex;
 }
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer .menuRow {

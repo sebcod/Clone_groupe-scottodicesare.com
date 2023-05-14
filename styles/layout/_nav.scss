@@ -69,10 +69,12 @@ nav {
             &:hover {
                 cursor: pointer;
 
-                .sousMenuContainer {
-                    transform: translateY(0);
-                    visibility: visible;
-                    opacity: 0.98;
+                @media screen and (min-width: 768px) {
+                    .sousMenuContainer {
+                        transform: translateY(0);
+                        visibility: visible;
+                        opacity: 0.98;
+                    }
                 }
             }
 
@@ -93,12 +95,14 @@ nav {
                 transition: all 0.2s ease-in;
 
                 @media screen and (max-width: 768px) {
+                    visibility: visible;
+                    opacity: 1;
                     flex-direction: column;
-                    padding: 20px;
+                    //padding: 20px;
                     position: inherit;
                     width: 100vw;
-
                     transform: translateX(-20px);
+                    display: none;
                 }
 
                 .sousMenu {
@@ -163,8 +167,8 @@ nav {
                 }
             }
 
-            .sousMenuHidden {
-                display: none;
+            .activeSousMenuMobile {
+                display: flex;
             }
 
             @media screen and (max-width: 768px) {
