@@ -165,6 +165,12 @@ header .menu nav .menuContainer .arrowDown::after {
     border-left: 4px solid transparent;
   }
 }
+header .menu nav .menuContainer .menuRow span {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+}
 header .menu nav .menuContainer .menuRow:hover {
   cursor: pointer;
 }
@@ -198,9 +204,10 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
     visibility: visible;
     opacity: 1;
     flex-direction: column;
+    padding: 20px;
     position: inherit;
-    width: 100vw;
-    transform: translateX(-20px);
+    width: 100%;
+    transform: translateY(0);
     display: none;
   }
 }
@@ -219,7 +226,6 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuC
   flex-direction: column;
 }
 header .menu nav .menuContainer .menuRow .sousMenuContainer .sousMenu .sousMenuColumn li {
-  transition: 0.5s ease;
   padding: 0 30px;
   width: 100%;
   font-weight: 700;
@@ -260,7 +266,6 @@ header .menu nav .menuContainer .menuRow .activeSousMenuMobile {
   header .menu nav .menuContainer .menuRow {
     width: 100%;
     position: relative;
-    padding-left: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -271,12 +276,6 @@ header .menu nav .menuContainer .menuRow .activeSousMenuMobile {
     left: 0px;
     top: 100%;
     flex-direction: column;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .menu nav {
-    justify-content: end;
-    padding-right: 20px;
   }
 }
 @media screen and (max-width: 768px) {

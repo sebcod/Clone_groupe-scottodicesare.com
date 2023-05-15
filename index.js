@@ -35,7 +35,6 @@ menuBurger.addEventListener("click", () => {
   menuRow.forEach((row) => {
     row.addEventListener("click", (e) => {
       if (window.matchMedia("(max-width: 768px)").matches) {
-        console.log("max-width: 768px");
         switch (e.target.id) {
           case "CFA":
             sousMenuCFA.classList.toggle("activeSousMenuMobile");
@@ -104,7 +103,6 @@ menuBurger.addEventListener("click", () => {
   });
   main.addEventListener("click", (e) => {
     if (window.matchMedia("(max-width: 768px)").matches) {
-      console.log("main");
       sousMenuCFA.classList.remove("activeSousMenuMobile");
       sousMenuEcole.classList.remove("activeSousMenuMobile");
       sousMenuEsthetique.classList.remove("activeSousMenuMobile");

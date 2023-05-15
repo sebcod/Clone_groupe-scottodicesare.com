@@ -28,7 +28,6 @@ nav {
 
                 @media screen and (max-width: 768px) {
                     margin-right: 20px;
-
                     content: "";
                     position: absolute;
                     z-index: 0;
@@ -66,11 +65,19 @@ nav {
 
         .menuRow {
 
+            span {
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                padding-left: 10px;
+            }
+
             &:hover {
                 cursor: pointer;
 
                 @media screen and (min-width: 768px) {
                     .sousMenuContainer {
+
                         transform: translateY(0);
                         visibility: visible;
                         opacity: 0.98;
@@ -83,7 +90,6 @@ nav {
                 justify-content: center;
                 column-gap: 8%;
                 position: absolute;
-                //z-index: 0;
                 left: 0px;
                 background-color: $color3;
                 color: $color1;
@@ -98,10 +104,11 @@ nav {
                     visibility: visible;
                     opacity: 1;
                     flex-direction: column;
-                    //padding: 20px;
+                    padding: 20px;
                     position: inherit;
-                    width: 100vw;
-                    transform: translateX(-20px);
+                    width: 100%;
+                    transform: translateY(0);
+
                     display: none;
                 }
 
@@ -115,7 +122,6 @@ nav {
                             width: 100%;
                             padding: 0;
                             margin: 0;
-
                         }
                     }
 
@@ -123,7 +129,6 @@ nav {
                         flex-direction: column;
 
                         li {
-                            transition: 0.5s ease;
                             padding: 0 30px;
                             width: 100%;
                             font-weight: 700;
@@ -174,7 +179,7 @@ nav {
             @media screen and (max-width: 768px) {
                 width: 100%;
                 position: relative;
-                padding-left: 20px;
+                //padding-left: 20px;
             }
 
         }
@@ -189,15 +194,9 @@ nav {
         }
     }
 
-    @media screen and (max-width: 768px) {
-        justify-content: end;
-        padding-right: 20px;
-    }
-
     .menuContainerMobileHidden {
         @media screen and (max-width: 768px) {
             display: none;
-
         }
     }
 
