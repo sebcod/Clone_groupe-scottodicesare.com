@@ -406,7 +406,7 @@ main {
   text-align: center;
   gap: 65px;
 }
-main .banner {
+main .bannerCarousel {
   width: 100vw;
   height: 515px;
   border: solid;
