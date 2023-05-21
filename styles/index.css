@@ -178,7 +178,7 @@ header .menu nav .menuContainer .menuRow:hover {
   header .menu nav .menuContainer .menuRow:hover .sousMenuContainer {
     transform: translateY(0);
     visibility: visible;
-    opacity: 0.98;
+    opacity: 0.95;
   }
 }
 header .menu nav .menuContainer .menuRow .sousMenuContainer {
@@ -189,6 +189,7 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
   -moz-column-gap: 8%;
        column-gap: 8%;
   position: absolute;
+  z-index: 10;
   left: 0px;
   background-color: rgb(255, 255, 255);
   color: rgb(14, 14, 14);
@@ -271,6 +272,7 @@ header .menu nav .menuContainer .menuRow .activeSousMenuMobile {
 @media screen and (max-width: 768px) {
   header .menu nav .menuContainer {
     position: absolute;
+    z-index: 10;
     background-color: rgb(14, 14, 14);
     width: 100%;
     left: 0px;
@@ -396,9 +398,8 @@ header .menu nav .disableMenuBurger .bar::before {
 }
 
 main {
-  border: solid;
   background-color: rgb(255, 255, 255);
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -407,9 +408,57 @@ main {
   gap: 65px;
 }
 main .bannerCarousel {
-  width: 100vw;
+  width: 100%;
   height: 515px;
-  border: solid;
+  overflow: hidden;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+main .bannerCarousel .imgBannerCarousel {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+main .bannerCarousel .imgBannerCarousel.active_imgBannerCarousel {
+  display: block;
+  animation: zoom 15s;
+  animation-fill-mode: forwards;
+}
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+main .bannerCarousel .background-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+main .bannerCarousel .btn_BannerCarousel {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+}
+main .bannerCarousel .btn_BannerCarousel :hover {
+  cursor: pointer;
+}
+main .bannerCarousel .btn_BannerCarousel .btn_BannerCarousel_left {
+  margin-left: 20px;
+}
+main .bannerCarousel .btn_BannerCarousel .btn_BannerCarousel_right {
+  margin-right: 20px;
 }
 main section {
   min-width: 1140px;
