@@ -26,8 +26,16 @@ a,
   font-family: "fontRaleway";
   src: url(../font/raleway/Raleway-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "BedasNeue";
+  src: url(../font/bebas_neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url(../font/helvetica_REsgA/Helvetica/Helvetica\ CE\ Medium/);
+}
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "fontRaleway", sans-serif;
 }
 body main {
   background-color: rgba(180, 17, 17, 0.4431372549);
@@ -414,6 +422,58 @@ main .bannerCarousel {
   position: relative;
   color: rgb(255, 255, 255);
 }
+main .bannerCarousel .textImgBanner {
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+main .bannerCarousel .textImgBanner h1 {
+  font-family: "BedasNeue", sans-serif;
+  font-size: 61px;
+  font-weight: 700;
+  line-height: 61px;
+  color: #fff9f9;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+main .bannerCarousel .textImgBanner p {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+main .bannerCarousel .textImgBanner button {
+  background: transparent;
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  line-height: 1;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  text-align: center;
+  transition: all 0.3s;
+  color: inherit;
+}
+main .bannerCarousel .textImgBanner.active_textImgBanner {
+  display: block;
+  animation: chowText 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes chowText {
+  from {
+    opacity: 0;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 1;
+    bottom: 250px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
 main .bannerCarousel .imgBannerCarousel {
   -o-object-fit: cover;
      object-fit: cover;
@@ -445,6 +505,7 @@ main .bannerCarousel .background-overlay {
 main .bannerCarousel .btn_BannerCarousel {
   width: 100%;
   position: absolute;
+  z-index: 3;
   top: 50%;
   transform: translateY(-50%);
   display: flex;

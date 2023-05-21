@@ -6,7 +6,18 @@ const btn_BannerCarousel_left = document.querySelector(
 const btn_BannerCarousel_right = document.querySelector(
   ".btn_BannerCarousel_right"
 );
+const textsImgBanner = document.querySelectorAll(".textImgBanner");
+console.log(textsImgBanner);
+
 let count = 0;
+
+const remove_active_textImgBanner = () => {
+  textsImgBanner.forEach((textsImgBanner) => {
+    textsImgBanner.classList.remove("active_textImgBanner");
+  });
+};
+
+textsImgBanner[count].classList.add("active_textImgBanner");
 
 function nextImage() {
   imgsBannerCarousel[count].classList.remove("active_imgBannerCarousel");
@@ -16,6 +27,8 @@ function nextImage() {
     count = 0;
   }
   imgsBannerCarousel[count].classList.add("active_imgBannerCarousel");
+  remove_active_textImgBanner();
+  textsImgBanner[count].classList.add("active_textImgBanner");
 }
 
 function previousImage() {
@@ -26,6 +39,8 @@ function previousImage() {
     count = nbrsImgs - 1;
   }
   imgsBannerCarousel[count].classList.add("active_imgBannerCarousel");
+  remove_active_textImgBanner();
+  textsImgBanner[count].classList.add("active_textImgBanner");
 }
 
 btn_BannerCarousel_right.addEventListener("click", () => {
