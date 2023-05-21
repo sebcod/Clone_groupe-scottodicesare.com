@@ -80,7 +80,7 @@ nav {
 
                         transform: translateY(0);
                         visibility: visible;
-                        opacity: 0.98;
+                        opacity: 0.95;
                     }
                 }
             }
@@ -90,6 +90,7 @@ nav {
                 justify-content: center;
                 column-gap: 8%;
                 position: absolute;
+                z-index: 10;
                 left: 0px;
                 background-color: $color3;
                 color: $color1;
@@ -186,6 +187,7 @@ nav {
 
         @media screen and (max-width: 768px) {
             position: absolute;
+            z-index: 10;
             background-color: $color1;
             width: 100%;
             left: 0px;

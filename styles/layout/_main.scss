@@ -1,17 +1,14 @@
 main {
-    border: solid;
+    //border: solid;
     background-color: $color3;
-    width: 100vw;
+    width: 100%;
 
 
     @include centerColumn;
     gap: 65px;
 
-    .banner {
-        width: 100vw;
-        height: 515px;
-        border: solid;
-    }
+
+    @import "./bannerCarousel";
 
     section {
         min-width: 1140px;
