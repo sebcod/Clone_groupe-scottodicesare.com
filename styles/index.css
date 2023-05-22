@@ -470,7 +470,7 @@ main .bannerCarousel .textImgBanner button {
 }
 main .bannerCarousel .textImgBanner.active_textImgBanner {
   display: block;
-  animation: chowText 1.5s ease-in-out;
+  animation: chowText 1.5s ease-out;
   animation-fill-mode: forwards;
 }
 @keyframes chowText {
