@@ -60,8 +60,22 @@ $color10: #E8348C;
 
 $fontRaleway: "fontRaleway", sans-serif;
 
+@font-face {
+    font-family: "BedasNeue";
+    src: url(../font/bebas_neue/BebasNeue-Regular.ttf);
+}
+
+$BedasNeue: "BedasNeue", sans-serif;
+
+@font-face {
+    font-family: "Helvetica";
+    src: url(../font/helvetica_REsgA/Helvetica/Helvetica\ CE\ Medium/);
+}
+
+$Helvetica: "Helvetica", sans-serif;
+
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: $fontRaleway;
 
     main {
         background-color: #b4111171;

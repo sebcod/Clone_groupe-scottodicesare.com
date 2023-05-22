@@ -5,8 +5,79 @@
     overflow: hidden;
     position: relative;
     color: $color3;
+    //border: 2px solid blue;
 
+    .textImgBanner {
+        //border: 2px solid red;
+        position: absolute;
+        z-index: 2;
+        width: 85%;
+        display: none;
 
+        h1 {
+            //border: 2px solid red;
+            font-family: $BedasNeue;
+            font-size: 61px;
+            font-weight: 700;
+            line-height: 61px;
+            color: #fff9f9;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 58px;
+                line-height: 58px;
+            }
+        }
+
+        p {
+            font-family: $Helvetica;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 24px;
+            margin-bottom: 30px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        button {
+            background: transparent;
+            text-decoration: none;
+            border: 2px solid $color3;
+            line-height: 1;
+            font-size: 15px;
+            padding: 12px 24px;
+            border-radius: 3px;
+            text-align: center;
+            transition: all 0.3s;
+            color: inherit;
+        }
+
+        &.active_textImgBanner {
+            display: block;
+            animation: chowText 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes chowText {
+        from {
+            opacity: 0;
+            bottom: -100px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        to {
+            opacity: 1;
+            bottom: 250px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
 
     .imgBannerCarousel {
         object-fit: cover;
@@ -43,6 +114,7 @@
     .btn_BannerCarousel {
         width: 100%;
         position: absolute;
+        z-index: 3;
         top: 50%;
         transform: translateY(-50%);
         display: flex;
