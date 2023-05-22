@@ -467,7 +467,7 @@ main .bannerCarousel .textImgBanner button {
 }
 main .bannerCarousel .textImgBanner.active_textImgBanner {
   display: block;
-  animation: chowText 1.5s ease-out;
+  animation: chowText 0.8s ease;
   animation-fill-mode: forwards;
 }
 @keyframes chowText {
@@ -572,9 +572,6 @@ main section .container button {
   color: rgb(255, 255, 255);
   text-transform: capitalize;
 }
-main section .container button:hover {
-  color: #7D9D85;
-}
 main section .container .body {
   display: flex;
   flex-direction: column;
@@ -609,6 +606,14 @@ main section .container .leftPart.ratio_60-40 .header {
   display: flex;
   width: 100%;
 }
+main section .container .leftPart.ratio_60-40 .header.p30px {
+  padding-left: 30px;
+}
+main section .container .leftPart.ratio_60-40 .header .h1_96px {
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 96px;
+}
 main section .container .leftPart.ratio_60-40 .header .leftPart {
   width: 30%;
 }
@@ -623,21 +628,31 @@ main section .container .leftPart.ratio_60-40 .header .rightPart {
   text-align: left;
   gap: 20px;
 }
+main section .container .leftPart.ratio_60-40 .header.with100 .leftPart {
+  width: 0%;
+}
+main section .container .leftPart.ratio_60-40 .header.with100 .rightPart {
+  width: 100%;
+}
 main section .container .leftPart.ratio_60-40 button {
   background-color: transparent;
 }
+main section .container .leftPart.ratio_60-40 button:hover {
+  color: #7D9D85;
+  cursor: pointer;
+}
 main section .container .rightPart.ratio_60-40 {
   width: 40%;
-  padding: 30px;
+  padding: 30px 30px 30px;
 }
 main section .container .rightPart.ratio_60-40.noPadding {
   padding: 0;
 }
 main section .container .leftPart.ratio_40-60 {
-  width: 40%;
+  width: 35%;
 }
 main section .container .rightPart.ratio_40-60 {
-  width: 70%;
+  width: 65%;
   display: flex;
 }
 main section .container .rightPart.ratio_40-60 .leftPart {
@@ -655,6 +670,25 @@ main section .container .rightPart.ratio_40-60 .rightPart {
   align-items: start;
   gap: 20px;
 }
+main section .container .rightPart.ratio_40-60 .rightPart button {
+  border: none;
+}
+main section .container .rightPart.ratio_40-60 .rightPart .textAlignRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-items: end;
+}
+main section .container .rightPart.ratio_40-60 .rightPart .textAlignRight .h1_96px {
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 96px;
+}
+main section .container .rightPart.ratio_40-60 .rightPart .textAlignRight p {
+  text-align: right;
+}
 main section .container .rightPart.ratio_40-60 button {
   background-color: #7D9D85;
 }
@@ -662,6 +696,7 @@ main section .container .rightPart.ratio_40-60 button:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(14, 14, 14);
   border-color: rgb(14, 14, 14);
+  cursor: pointer;
 }
 main section .container.bgBlack {
   background-color: rgb(14, 14, 14);

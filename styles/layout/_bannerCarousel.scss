@@ -58,7 +58,7 @@
 
         &.active_textImgBanner {
             display: block;
-            animation: chowText 1.5s ease-out;
+            animation: chowText 0.8s ease;
             animation-fill-mode: forwards;
         }
     }

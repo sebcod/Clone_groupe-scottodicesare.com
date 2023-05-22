@@ -7,7 +7,6 @@ main {
     @include centerColumn;
     gap: 65px;
 
-
     @import "./bannerCarousel";
 
     section {
@@ -15,7 +14,6 @@ main {
         height: 660px;
 
         .container {
-            //border: solid blue;
             width: 100%;
             height: 100%;
             display: flex;
@@ -39,7 +37,7 @@ main {
                 font-family: $BedasNeue;
                 font-size: 55px;
                 font-weight: 700;
-                line-height: 55px
+                line-height: 55px;
             }
 
             button {
@@ -53,10 +51,6 @@ main {
                 line-height: 1;
                 color: $color3;
                 text-transform: capitalize;
-
-                &:hover {
-                    color: #7D9D85;
-                }
             }
 
 
@@ -65,7 +59,6 @@ main {
                 @include centerColumn;
                 gap: 30px;
                 align-items: start;
-                //border: solid red;
                 padding: 30px;
                 font-family: $Helvetica;
                 font-weight: 300;
@@ -89,9 +82,18 @@ main {
                 width: 60%;
 
                 .header {
-                    //border: solid red;
                     display: flex;
                     width: 100%;
+
+                    &.p30px {
+                        padding-left: 30px;
+                    }
+
+                    & .h1_96px {
+                        font-size: 96px;
+                        font-weight: 500;
+                        line-height: 96px;
+                    }
 
                     .leftPart {
                         width: 30%;
@@ -103,17 +105,33 @@ main {
                         align-items: start;
                         text-align: left;
                         gap: 20px;
+
+                    }
+
+                    &.with100 {
+                        .leftPart {
+                            width: 0%;
+                        }
+
+                        .rightPart {
+                            width: 100%;
+                        }
                     }
                 }
 
                 button {
                     background-color: transparent;
+
+                    &:hover {
+                        color: #7D9D85;
+                        cursor: pointer;
+                    }
                 }
             }
 
             .rightPart.ratio_60-40 {
                 width: 40%;
-                padding: 30px;
+                padding: 30px 30px 30px;
 
                 &.noPadding {
                     padding: 0;
@@ -121,32 +139,44 @@ main {
             }
 
             .leftPart.ratio_40-60 {
-                width: 40%;
+                width: 35%;
             }
 
             .rightPart.ratio_40-60 {
-                width: 70%;
+                width: 65%;
                 display: flex;
-                //border: none;
 
                 .leftPart {
                     width: 25%;
                     padding-left: 20px;
                     padding-top: 100px;
-
-                    span {
-                        //border: solid blue;
-                        // margin-top: 100px;
-
-                    }
                 }
 
                 .rightPart {
-                    //border: solid red;
+
                     width: 75%;
                     @include centerColumn;
                     align-items: start;
                     gap: 20px;
+
+                    button {
+                        border: none;
+                    }
+
+                    .textAlignRight {
+                        @include centerColumn;
+                        align-items: end;
+
+                        & .h1_96px {
+                            font-size: 96px;
+                            font-weight: 600;
+                            line-height: 96px;
+                        }
+
+                        p {
+                            text-align: right;
+                        }
+                    }
 
                 }
 
@@ -157,13 +187,10 @@ main {
                         color: $color3;
                         background-color: $color1;
                         border-color: $color1;
+                        cursor: pointer;
                     }
                 }
-
-
             }
-
-
         }
 
         .container.bgBlack {
