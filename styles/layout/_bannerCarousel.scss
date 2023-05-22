@@ -11,6 +11,7 @@
         //border: 2px solid red;
         position: absolute;
         z-index: 2;
+        width: 85%;
         display: none;
 
         h1 {
@@ -22,6 +23,11 @@
             color: #fff9f9;
             text-transform: uppercase;
             margin-bottom: 30px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 58px;
+                line-height: 58px;
+            }
         }
 
         p {
@@ -30,6 +36,11 @@
             font-size: 17px;
             line-height: 24px;
             margin-bottom: 30px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
 
         button {

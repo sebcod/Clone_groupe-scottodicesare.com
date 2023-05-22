@@ -425,6 +425,7 @@ main .bannerCarousel {
 main .bannerCarousel .textImgBanner {
   position: absolute;
   z-index: 2;
+  width: 85%;
   display: none;
 }
 main .bannerCarousel .textImgBanner h1 {
@@ -436,12 +437,24 @@ main .bannerCarousel .textImgBanner h1 {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 768px) {
+  main .bannerCarousel .textImgBanner h1 {
+    font-size: 58px;
+    line-height: 58px;
+  }
+}
 main .bannerCarousel .textImgBanner p {
   font-family: "Helvetica", sans-serif;
   font-weight: 600;
   font-size: 17px;
   line-height: 24px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  main .bannerCarousel .textImgBanner p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 main .bannerCarousel .textImgBanner button {
   background: transparent;
