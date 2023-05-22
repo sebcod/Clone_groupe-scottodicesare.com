@@ -10,14 +10,13 @@ const textsImgBanner = document.querySelectorAll(".textImgBanner");
 console.log(textsImgBanner);
 
 let count = 0;
+let timerNextImage = setInterval(() => nextImage(), 5000);
 
 const remove_active_textImgBanner = () => {
   textsImgBanner.forEach((textsImgBanner) => {
     textsImgBanner.classList.remove("active_textImgBanner");
   });
 };
-
-textsImgBanner[count].classList.add("active_textImgBanner");
 
 function nextImage() {
   imgsBannerCarousel[count].classList.remove("active_imgBannerCarousel");
@@ -43,10 +42,21 @@ function previousImage() {
   textsImgBanner[count].classList.add("active_textImgBanner");
 }
 
+function autoPLay() {
+  timerNextImage;
+}
+
+window.addEventListener("load", () => {
+  textsImgBanner[count].classList.add("active_textImgBanner");
+  setTimeout(autoPLay(), 5000);
+});
+
 btn_BannerCarousel_right.addEventListener("click", () => {
+  clearTimeout(timerNextImage);
   nextImage();
 });
 
 btn_BannerCarousel_left.addEventListener("click", () => {
+  clearTimeout(timerNextImage);
   previousImage();
 });
