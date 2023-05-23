@@ -1,0 +1,16 @@
+.partenairesCarousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include center;
+
+    @media screen and (max-width: 1140px) {
+        display: block;
+    }
+
+    .imgPartenairesCarousel {
+        object-fit: cover;
+        width: 251px;
+        height: 163px;
+    }
+}
