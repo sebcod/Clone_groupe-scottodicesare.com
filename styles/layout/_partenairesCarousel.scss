@@ -5,7 +5,9 @@
     @include center;
 
     @media screen and (max-width: 1140px) {
-        display: block;
+
+        @include centerColumn;
+        width: 100%;
     }
 
     .imgPartenairesCarousel {
