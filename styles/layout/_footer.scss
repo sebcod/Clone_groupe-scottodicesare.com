@@ -1,8 +1,153 @@
 footer {
-    color: $color3;
-    width: 100vw;
-    height: 365px;
-    background-color: $color1;
-}
+    .footerBody {
+        color: $color3;
+        width: 100%;
+        padding: 40px;
+        background-color: $color1;
+        display: flex;
+        font-family: $Helvetica;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
 
-Partenaires {}
+        @media screen and (max-width: 768px) {
+            @include centerColumn;
+            gap: 50px;
+        }
+
+        img {
+
+            //height: 100%;
+
+        }
+
+        .sdc {
+            width: 25%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+
+            .sdcLogo {
+                @include center;
+                height: 163px;
+            }
+
+            img {
+                width: 50%;
+            }
+
+            .sdcContact {
+                ul {
+                    @include centerColumn;
+                }
+            }
+        }
+
+        .scottoDiCesare {
+            width: 25%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+
+            .scottoDiCesareLogo {
+                @include center;
+                height: 163px;
+
+                img {
+                    width: 94%;
+                }
+            }
+
+            .scottoDiCesareContact {
+                ul {
+                    @include centerColumn;
+                }
+            }
+        }
+
+        .reseaux {
+            width: 25%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+
+            @include centerColumn;
+
+            ul {
+                @include centerColumn;
+                gap: 20px;
+
+                li {
+                    display: flex;
+                    gap: 50px;
+                    font-size: 40px;
+
+                    button {
+                        background-color: #7D9D85;
+                        font-size: 13px;
+                        padding: 10px 20px;
+                        border-radius: 2px;
+                        color: #fff;
+                        border: none;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .certification {
+            width: 25%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+
+            @include centerColumn;
+            gap: 20px;
+
+            .certificationLogos {
+                @include center;
+                justify-content: space-around;
+                width: 100%;
+
+                img {
+                    height: 60px;
+                }
+            }
+
+            .certificationTextes {
+                width: 100%;
+                text-align: left;
+                ;
+            }
+        }
+
+
+    }
+
+    .footerButtom {
+        color: $color3;
+        background-color: $color1;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 10px;
+
+        ul {
+            @include center;
+            gap: 40px;
+
+            li {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
