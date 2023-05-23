@@ -46,16 +46,23 @@ main {
                 letter-spacing: 6.32px;
             }
 
+            .animH1 {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+
             h1 {
                 font-family: $BedasNeue;
                 font-size: 55px;
                 font-weight: 700;
                 line-height: 55px;
+                transition: all 1s;
+                transform: translateY(50%);
+                opacity: 0;
 
                 @media screen and (max-width: 1140px) {
                     text-align: left;
                 }
-
             }
 
             button {

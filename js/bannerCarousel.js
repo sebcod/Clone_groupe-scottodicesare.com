@@ -7,7 +7,7 @@ const btn_BannerCarousel_right = document.querySelector(
   ".btn_BannerCarousel_right"
 );
 const textsImgBanner = document.querySelectorAll(".textImgBanner");
-console.log(textsImgBanner);
+//console.log(textsImgBanner);
 
 let count = 0;
 let timerNextImage = setInterval(() => nextImage(), 5000);

@@ -574,11 +574,18 @@ main section .container span {
   line-height: 215px;
   letter-spacing: 6.32px;
 }
+main section .container .animH1 {
+  transform: translateY(0%);
+  opacity: 1;
+}
 main section .container h1 {
   font-family: "BedasNeue", sans-serif;
   font-size: 55px;
   font-weight: 700;
   line-height: 55px;
+  transition: all 1s;
+  transform: translateY(50%);
+  opacity: 0;
 }
 @media screen and (max-width: 1140px) {
   main section .container h1 {
