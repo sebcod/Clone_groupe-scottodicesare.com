@@ -267,8 +267,41 @@ main {
     }
 
     .partenaires {
-        width: 100vw;
-        height: 515px;
-        border: solid;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 50px;
+        width: 100%;
+
+        @media screen and (max-width: 1140px) {
+            display: block;
+        }
+
+        .partenairesLeft {
+            background-color: $color1;
+
+            border: solid;
+            width: 414px;
+            height: 353px;
+            @include center;
+
+            @media screen and (max-width: 1140px) {
+                width: 100%;
+            }
+
+            h2 {
+                color: $color3;
+                font-family: $BedasNeue;
+                text-transform: uppercase;
+                font-size: 96px;
+                font-weight: 500;
+                line-height: 96px;
+            }
+        }
+
+        .partenairesRight {
+            height: 353px;
+            @import "./partenairesCarousel";
+        }
     }
 }
