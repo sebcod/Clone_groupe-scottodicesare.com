@@ -1,5 +1,4 @@
-# About
-Clone home page groupe-scottodicesare.com
+# Clone home page groupe-scottodicesare.com
 
 ## Languages
 
