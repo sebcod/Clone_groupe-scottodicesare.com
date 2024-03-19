@@ -87,6 +87,7 @@ main {
                 font-weight: 300;
                 font-size: 16px;
                 line-height: 24px;
+                width: 100vw;
 
                 p {
                     text-align: left;
@@ -129,9 +130,14 @@ main {
                     }
 
                     & .h1_96px {
+                        @media screen and (max-width: 1140px) {
+                            font-size: 50px;
+                            line-height: 50px;
+                        }
                         font-size: 96px;
-                        font-weight: 500;
                         line-height: 96px;
+                        font-weight: 500;
+
                     }
 
                     .leftPart {
@@ -229,6 +235,10 @@ main {
                         align-items: end;
 
                         & .h1_96px {
+                            @media screen and (max-width: 1140px) {
+                                font-size: 50px;
+                                line-height: 50px;
+                            }
                             font-size: 96px;
                             font-weight: 600;
                             line-height: 96px;
@@ -296,6 +306,10 @@ main {
                 font-size: 96px;
                 font-weight: 500;
                 line-height: 96px;
+                @media screen and (max-width: 1140px) {
+                    font-size: 50px;
+                    line-height: 50px;
+                }
             }
         }
 

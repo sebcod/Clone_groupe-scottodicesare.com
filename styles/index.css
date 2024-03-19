@@ -100,8 +100,7 @@ header .logo {
 }
 header .logo img {
   width: 70%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 header .menu {
   grid-area: menu;
@@ -125,8 +124,7 @@ header .menu nav .menuContainer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  -moz-column-gap: 35px;
-       column-gap: 35px;
+  column-gap: 35px;
 }
 header .menu nav .menuContainer .arrowDown::after {
   content: "";
@@ -191,8 +189,7 @@ header .menu nav .menuContainer .menuRow .sousMenuContainer {
   justify-content: center;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 8%;
-       column-gap: 8%;
+  column-gap: 8%;
   position: absolute;
   z-index: 10;
   left: 0px;
@@ -487,8 +484,7 @@ main .bannerCarousel .textImgBanner.active_textImgBanner {
   }
 }
 main .bannerCarousel .imgBannerCarousel {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   display: none;
@@ -561,8 +557,7 @@ main section .container {
 main section .container img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (max-width: 1140px) {
   main section .container img {
@@ -620,6 +615,7 @@ main section .container .body {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+  width: 100vw;
   margin-bottom: 0;
 }
 main section .container .body p {
@@ -662,8 +658,14 @@ main section .container .leftPart.ratio_60-40 .header.p30px {
 }
 main section .container .leftPart.ratio_60-40 .header .h1_96px {
   font-size: 96px;
-  font-weight: 500;
   line-height: 96px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1140px) {
+  main section .container .leftPart.ratio_60-40 .header .h1_96px {
+    font-size: 50px;
+    line-height: 50px;
+  }
 }
 main section .container .leftPart.ratio_60-40 .header .leftPart {
   width: 30%;
@@ -764,6 +766,12 @@ main section .container .rightPart.ratio_40-60 .rightPart .textAlignRight .h1_96
   font-weight: 600;
   line-height: 96px;
 }
+@media screen and (max-width: 1140px) {
+  main section .container .rightPart.ratio_40-60 .rightPart .textAlignRight .h1_96px {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
 main section .container .rightPart.ratio_40-60 .rightPart .textAlignRight p {
   text-align: right;
 }
@@ -818,6 +826,12 @@ main .partenaires .partenairesLeft h2 {
   font-weight: 500;
   line-height: 96px;
 }
+@media screen and (max-width: 1140px) {
+  main .partenaires .partenairesLeft h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
 main .partenaires .partenairesRight .partenairesCarousel {
   width: 100%;
   height: 100%;
@@ -837,8 +851,7 @@ main .partenaires .partenairesRight .partenairesCarousel {
   }
 }
 main .partenaires .partenairesRight .partenairesCarousel .imgPartenairesCarousel {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 251px;
   height: 163px;
 }
@@ -992,4 +1005,6 @@ footer .footerButtom ul {
 }
 footer .footerButtom ul li:hover {
   cursor: pointer;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
