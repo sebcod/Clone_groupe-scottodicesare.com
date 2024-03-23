@@ -615,7 +615,7 @@ main section .container .body {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  width: 100vw;
+  width: 100%;
   margin-bottom: 0;
 }
 main section .container .body p {
@@ -749,6 +749,11 @@ main section .container .rightPart.ratio_40-60 .rightPart {
   text-align: center;
   align-items: start;
   gap: 20px;
+}
+@media screen and (max-width: 1140px) {
+  main section .container .rightPart.ratio_40-60 .rightPart {
+    width: 100vw;
+  }
 }
 main section .container .rightPart.ratio_40-60 .rightPart button {
   border: none;
